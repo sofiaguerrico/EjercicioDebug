@@ -30,6 +30,7 @@ namespace WordsPhrases
         /// <param name="word">La palabra a agregar.</param>
         public void AddWord(Word word)
         {
+            
             this.words.Add(word);
         }
 
@@ -54,13 +55,14 @@ namespace WordsPhrases
             {
                 phrase.Append(" ");
                 phrase.Append(word.Text);
+                
             }
 
             string result = phrase.ToString();
 
             // Remueve el primer espacio que se agrega siempre
 
-            return result;
+            return result.Trim();
         }
     }
 }
